@@ -5,26 +5,25 @@ const slides = [
     img: "/assets/org_tools-7DWlPw6L.png",
     title: "Organize your tools",
     desc: "Keep your apps, subscriptions, and tech stack in one simple space.",
-    bg: "linear-gradient(to bottom, #ffebee 0%, #f8bbd0 100%)", // Light Pink
+    bg: "linear-gradient(to bottom, #ffebee 0%, #f8bbd0 100%)",
   },
   {
     img: "/assets/discover_tools-DZ0lYYtv.png",
     title: "Discover what works",
     desc: "Find new tools tailored to your workflow, curated for freelancers and remote workers.",
-    bg: "linear-gradient(to bottom, #e8f5e9 0%, #c8e6c9 100%)", // Light Green
+    bg: "linear-gradient(to bottom, #e8f5e9 0%, #c8e6c9 100%)",
   },
   {
     img: "/assets/get_rewarded-CI6jGT9Z.png",
     title: "Get Rewarded",
     desc: "Earn perks, gift cards and cashback just for staying productive.",
-    bg: "linear-gradient(to bottom, #f3e5f5 0%, #e1bee7 100%)", // Light Purple
+    bg: "linear-gradient(to bottom, #f3e5f5 0%, #e1bee7 100%)",
   },
 ];
 
 export default function CoverFlowSlider() {
-  const [activeIndex, setActiveIndex] = useState(0); // Start at 0 now (first slide)
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  // Auto-play: Cycle through slides every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % slides.length);
@@ -39,14 +38,12 @@ export default function CoverFlowSlider() {
     const diff = index - activeIndex;
 
     if (diff === 0) {
-      // Active center slide
       return {
         transform: "translateX(0) translateZ(120px) rotateY(0deg) scale(1.1)",
         zIndex: 30,
         opacity: 1,
       };
     } else if (diff === -1 || diff === 2) {
-      // Previous slide - dramatic left door slant
       return {
         transform:
           "translateX(-480px) translateZ(-180px) rotateY(78deg) scale(0.82)",
@@ -54,7 +51,6 @@ export default function CoverFlowSlider() {
         opacity: 0.55,
       };
     } else if (diff === 1 || diff === -2) {
-      // Next slide - dramatic right door slant
       return {
         transform:
           "translateX(480px) translateZ(-180px) rotateY(-78deg) scale(0.82)",
@@ -62,7 +58,6 @@ export default function CoverFlowSlider() {
         opacity: 0.55,
       };
     } else {
-      // Far away - hidden
       return {
         opacity: 0,
         zIndex: 1,

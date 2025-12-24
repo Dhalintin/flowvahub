@@ -202,7 +202,7 @@ const LandingPage = () => {
                   <li>
                     <a
                       className="hover:underline underline-offset-2  font-bold"
-                      href="/blog"
+                      href="/"
                       data-discover="true"
                     >
                       Blog
@@ -225,7 +225,7 @@ const LandingPage = () => {
                   <li>
                     <a
                       className="hover:underline underline-offset-2  font-bold"
-                      href="/contact"
+                      href="/"
                       data-discover="true"
                     >
                       Contact Us
@@ -280,7 +280,7 @@ const LandingPage = () => {
                   <li>
                     <a
                       className="hover:underline underline-offset-2  font-bold"
-                      href="https://docs.google.com/document/d/12S_rqEERUuq_NrS2WKoG7pt_pAQqy9Q37BLxGOTMKQs/edit?usp=drivesdk"
+                      href="/"
                       target="_blanck"
                     >
                       Privacy Policy
@@ -293,7 +293,7 @@ const LandingPage = () => {
           <div className="md:w-fit flex items-center gap-5 justify-between w-full mt-10 px-[14px]">
             <a
               className="flex items-center gap-2 hover:underline underline-offset-1"
-              href="https://www.facebook.com/share/1DKr8atT1i/"
+              href="/"
               target="_blanck"
             >
               <svg
@@ -314,7 +314,7 @@ const LandingPage = () => {
             </a>
             <a
               className="flex items-center gap-2 hover:underline underline-offset-1"
-              href="https://x.com/FlowvaHub"
+              href="/"
               target="_blanck"
             >
               <svg
@@ -335,7 +335,7 @@ const LandingPage = () => {
             </a>
             <a
               className="flex items-center gap-2 hover:underline underline-offset-1"
-              href="https://www.instagram.com/flowvahub?igsh=MXE0cGsyMnRzc3FpeQ%3D%3D&amp;utm_source=qr"
+              href="/"
               target="_blanck"
             >
               <svg
@@ -356,7 +356,7 @@ const LandingPage = () => {
             </a>
             <a
               className="flex items-center gap-2 hover:underline underline-offset-1"
-              href="https://www.linkedin.com/company/flowva/"
+              href="/"
               target="_blanck"
             >
               <svg
@@ -377,7 +377,7 @@ const LandingPage = () => {
             </a>
             <a
               className="flex items-center gap-2 hover:underline underline-offset-1"
-              href="https://www.tiktok.com/@flowva.hub"
+              href="/"
               target="_blanck"
             >
               <svg

@@ -69,7 +69,7 @@ export default function ForBrands() {
         </h1>
       </div>
 
-      <button className="mt-8 md:mt-10 relative left-1/2 -translate-x-1/2 w-[232px] rounded-[100px] border border-[#9013FE1A] p-[6px] font-bold text-sm font-manrope">
+      <button className="mt-8 md:mt-10 relative left-1/2 -translate-x-1/2 w-[232px] rounded-[100px] border border-[#9013FE1A] p-[6px] font-bold text-sm ">
         <div className=" w-full text-sm whitespace-nowrap p-[24px] rounded-[100px] relative bg-[#111111] hover:bg-[#b362fae3] transition-all ease-linear duration-200 text-white shadow-[0px_2px_4px_0px_#0000001A,0px_6px_6px_0px_#00000017,0px_14px_9px_0px_#0000000D,0px_26px_10px_0px_#00000003,0px_40px_11px_0px_#00000000,-4px_13px_19px_0px_#ECD6FF80_inset]">
           Start Your 3-day Trial Today
         </div>
@@ -126,7 +126,7 @@ export default function ForBrands() {
           </h2>
           <div className="grid grid-cols-1  lg:grid-cols-7 gap-[24px]">
             <div className="h-[453px]  text-start flex flex-col items-start justify-between  bg-[#F5EBFF] rounded-[24px] p-[32px] w-full lg:col-span-3">
-              <h2 className="text-[32px] font-manrope font-bold">
+              <h2 className="text-[32px]  font-bold">
                 Engage an active community of tech savvy users
               </h2>
               <img
@@ -139,9 +139,7 @@ export default function ForBrands() {
               </p>
             </div>
             <div className="h-[453px]  bg-[#F5EBFF] flex flex-col items-start justify-between rounded-[24px]  lg:col-span-4 p-[32px]">
-              <h2 className="text-[32px] font-manrope font-bold">
-                Offer Exclusive Value
-              </h2>
+              <h2 className="text-[32px]  font-bold">Offer Exclusive Value</h2>
               <img
                 src="/assets/exclusive_offer-DIkQR0Gj.svg"
                 alt="tech savy users"
@@ -152,9 +150,7 @@ export default function ForBrands() {
               </p>
             </div>
             <div className="h-[453px] bg-[#F5EBFF] flex flex-col items-start justify-between rounded-[24px]  lg:col-span-4 p-[32px]">
-              <h2 className="text-[32px] font-manrope font-bold">
-                Boost Your Visibility
-              </h2>
+              <h2 className="text-[32px]  font-bold">Boost Your Visibility</h2>
               <img
                 src="/assets/top_tool_spotlight-BISlDxDf.svg"
                 alt="tech savy users"
@@ -165,9 +161,7 @@ export default function ForBrands() {
               </p>
             </div>
             <div className="h-[453px] bg-[#111111] relative text-white flex flex-col items-start overflow-hidden  rounded-[24px] lg:col-span-3 p-[32px]">
-              <h2 className="text-[32px] font-manrope font-bold">
-                Measure Your Impact
-              </h2>
+              <h2 className="text-[32px]  font-bold">Measure Your Impact</h2>
               <p className="text-[20px] mt-5 text-[#FFFFFFCC]">
                 Track how many users unlock, engage with, and activate your
                 offer.
@@ -207,106 +201,106 @@ export default function ForBrands() {
           <div className="flex justify-center">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 w-full">
               <div className="xl:col-span-2 lg:col-span-2 md:col-span-2 xl:block hidden col-span-1  undefined p-[undefined] min-h-fit xl:min-h-[301px] rounded-[16px]">
-                <p className=" font-manrope font-bold text-center xl:text-start">
+                <p className="  font-bold text-center xl:text-start">
                   VALUE PROPOSITION
                 </p>
                 <h2 className="text-[56px] font-[impact] text-center xl:text-start">
                   {" "}
                   TRUSTED BY LEADING PRODUCTS WITH ORGANIC MARKETING SUCCESS
                 </h2>
-                <h2 className="text-[24px] mt-5 font-manrope font-bold text-[black] "></h2>
-                <p className="mt-2 text-[#FFFFFF] font-manrope"></p>
+                <h2 className="text-[24px] mt-5  font-bold text-[black] "></h2>
+                <p className="mt-2 text-[#FFFFFF] "></p>
               </div>
               <div className="xl:col-span-1 lg:col-span-1 md:col-span-2 col-span-1 bg-[#D966FF] p-[16px] min-h-fit xl:min-h-[301px] rounded-[16px]">
-                <p className=" font-manrope font-bold text-center xl:text-start"></p>
+                <p className="  font-bold text-center xl:text-start"></p>
                 <h2 className="text-[56px] font-[impact] text-center xl:text-start"></h2>
                 <img
                   src="/assets/verified_3d-CCrDsVYL.svg"
                   alt=" image Verified engagement"
                 />
-                <h2 className="text-[24px] mt-5 font-manrope font-bold text-[white] ">
+                <h2 className="text-[24px] mt-5  font-bold text-[white] ">
                   Verified engagement
                 </h2>
-                <p className="mt-2 text-[#FFFFFF] font-manrope">
+                <p className="mt-2 text-[#FFFFFF] ">
                   Reach active tech-savvy professionals who manage their tool
                   libraries and actually try new tools, all included with your
                   subscription.
                 </p>
               </div>
               <div className="xl:col-span-1 lg:col-span-1 md:col-span-2 col-span-1 bg-[#FF66AB] p-[16px] min-h-fit xl:min-h-[301px] rounded-[16px]">
-                <p className=" font-manrope font-bold text-center xl:text-start"></p>
+                <p className="  font-bold text-center xl:text-start"></p>
                 <h2 className="text-[56px] font-[impact] text-center xl:text-start"></h2>
                 <img
                   src="/assets/growth_3d-4kWv8fe5.svg"
                   alt=" image Reward-Driven Growth"
                 />
-                <h2 className="text-[24px] mt-5 font-manrope font-bold text-[white] ">
+                <h2 className="text-[24px] mt-5  font-bold text-[white] ">
                   Reward-Driven Growth
                 </h2>
-                <p className="mt-2 text-[#FFFFFF] font-manrope">
+                <p className="mt-2 text-[#FFFFFF] ">
                   Incentivize users automatically with Flowva’s built-in rewards
                   system — no extra fees, fully handled by the platform.
                 </p>
               </div>
               <div className="xl:col-span-1 lg:col-span-1 md:col-span-2 col-span-1 bg-[#FF752C] p-[16px] min-h-fit xl:min-h-[301px] rounded-[16px]">
-                <p className=" font-manrope font-bold text-center xl:text-start"></p>
+                <p className="  font-bold text-center xl:text-start"></p>
                 <h2 className="text-[56px] font-[impact] text-center xl:text-start"></h2>
                 <img
                   src="/assets/service_3d-jhLrw6-a.svg"
                   alt=" image Full Self-Serve Freedom"
                 />
-                <h2 className="text-[24px] mt-5 font-manrope font-bold text-[white] ">
+                <h2 className="text-[24px] mt-5  font-bold text-[white] ">
                   Full Self-Serve Freedom
                 </h2>
-                <p className="mt-2 text-[#FFFFFF] font-manrope">
+                <p className="mt-2 text-[#FFFFFF] ">
                   Launch and manage campaigns anytime with an intuitive
                   dashboard. Target your campaigns, schedule actions, and track
                   engagement with complete control.
                 </p>
               </div>
               <div className="xl:col-span-1 lg:col-span-1 md:col-span-2 col-span-1 bg-[#2C95FF] p-[16px] min-h-fit xl:min-h-[301px] rounded-[16px]">
-                <p className=" font-manrope font-bold text-center xl:text-start"></p>
+                <p className="  font-bold text-center xl:text-start"></p>
                 <h2 className="text-[56px] font-[impact] text-center xl:text-start"></h2>
                 <img
                   src="/assets/premium_3d-CBRQqQod.svg"
                   alt=" image Optional Premium Support"
                 />
-                <h2 className="text-[24px] mt-5 font-manrope font-bold text-[white] ">
+                <h2 className="text-[24px] mt-5  font-bold text-[white] ">
                   Optional Premium Support
                 </h2>
-                <p className="mt-2 text-[#FFFFFF] font-manrope">
+                <p className="mt-2 text-[#FFFFFF] ">
                   For top-tier brands or high-impact campaigns, our team can
                   manage your campaigns, optimize engagement, and provide
                   advanced analytics.
                 </p>
               </div>
               <div className="xl:col-span-1 lg:col-span-1 md:col-span-2 col-span-1 bg-[#FC2367] p-[16px] min-h-fit xl:min-h-[301px] rounded-[16px]">
-                <p className=" font-manrope font-bold text-center xl:text-start"></p>
+                <p className="  font-bold text-center xl:text-start"></p>
                 <h2 className="text-[56px] font-[impact] text-center xl:text-start"></h2>
                 <img
                   src="/assets/access_3d-DZ4hiFUz.svg"
                   alt=" image Exclusive Access"
                 />
-                <h2 className="text-[24px] mt-5 font-manrope font-bold text-[white] ">
+                <h2 className="text-[24px] mt-5  font-bold text-[white] ">
                   Exclusive Access
                 </h2>
-                <p className="mt-2 text-[#FFFFFF] font-manrope">
+                <p className="mt-2 text-[#FFFFFF] ">
                   Your subscription unlocks Flowva’s curated audience. Our users
                   are verified, engaged, and relevant. Limited campaign slots
                   maintain visibility and exclusivity.
                 </p>
               </div>
               <div className="xl:col-span-1 lg:col-span-1 md:col-span-2 col-span-1 bg-[#5BBB6A] p-[16px] min-h-fit xl:min-h-[301px] rounded-[16px]">
-                <p className=" font-manrope font-bold text-center xl:text-start"></p>
+                <p className="  font-bold text-center xl:text-start"></p>
                 <h2 className="text-[56px] font-[impact] text-center xl:text-start"></h2>
                 <img
                   src="/assets/analytic-Ci8bQ1TF.svg"
                   alt=" image Actionable Analytics"
                 />
-                <h2 className="text-[24px] mt-5 font-manrope font-bold text-[white] ">
+                <h2 className="text-[24px] mt-5  font-bold text-[white] ">
                   Actionable Analytics
                 </h2>
-                <p className="mt-2 text-[#FFFFFF] font-manrope">
+                <p className="mt-2 text-[#FFFFFF] ">
                   Track real results; tool trials, user interactions, engagement
                   trends not just impressions. Make data-driven decisions for
                   every campaign.
@@ -319,21 +313,17 @@ export default function ForBrands() {
               <div className="w-full">
                 <h2 className="font-[impact] text-[56px]">1200+</h2>
                 <hr className="my-4 text-[#E5E7EB]" />
-                <p className="font-manrope font-bold text-sm">
-                  ACTIVE USER/MONTH
-                </p>
+                <p className=" font-bold text-sm">ACTIVE USER/MONTH</p>
               </div>
               <div className="w-full">
                 <h2 className="font-[impact] text-[56px]">35M+</h2>
                 <hr className="my-4 text-[#E5E7EB]" />
-                <p className="font-manrope font-bold text-sm">IMPRESSIONS</p>
+                <p className=" font-bold text-sm">IMPRESSIONS</p>
               </div>
               <div className="w-full">
                 <h2 className="font-[impact] text-[56px]">4200+</h2>
                 <hr className="my-4 text-[#E5E7EB]" />
-                <p className="font-manrope font-bold text-sm">
-                  PERSONALIZED ADS
-                </p>
+                <p className=" font-bold text-sm">PERSONALIZED ADS</p>
               </div>
             </div>
           </div>
@@ -344,7 +334,7 @@ export default function ForBrands() {
         <h2 className="text-[56px] md:text-[64px] font-[impact] mb-10 text-center">
           GROWTH PLANS
         </h2>
-        <div className="w-full md:max-w-6xl mx-auto  md:px-6 grid md:grid-cols-3 gap-8 font-manrope">
+        <div className="w-full md:max-w-6xl mx-auto  md:px-6 grid md:grid-cols-3 gap-8 ">
           <div className="w-full md:max-w-[410px] relative h-auto rounded-[24px] shadow-lg p-6 flex flex-col justify-between border background-color: rgb(249, 249, 249); color: black; bg-[rgba(0, 0, 0, 0.16)]">
             <div>
               <div className="flex items-center gap-3 mb-2">
@@ -722,11 +712,11 @@ export default function ForBrands() {
           <div className="flex justify-center">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full">
               <div className="h-fit md:h-[628px] col-span-1 p-[20px] md:p-[40px] overflow-hidden rounded-[16px] md:rounded-[24px] bg-[#F77A38] w-full ">
-                <div className="w-[93px] h-[40px] rounded-[100px] p-[10px_24px] font-semibold whitespace-nowrap bg-[#FFFFFF] font-manrope">
+                <div className="w-[93px] h-[40px] rounded-[100px] p-[10px_24px] font-semibold whitespace-nowrap bg-[#FFFFFF] ">
                   Step 1
                 </div>
                 <div className="">
-                  <h2 className="text-[32px] md:text-[40px] my-8 font-manrope font-bold text-[#FFFFFF]">
+                  <h2 className="text-[32px] md:text-[40px] my-8  font-bold text-[#FFFFFF]">
                     Subscribe.
                   </h2>
                   <p className="text-[#FFFFFFCC] text-[24px]">
@@ -740,11 +730,11 @@ export default function ForBrands() {
                 />
               </div>
               <div className="h-fit md:h-[628px] col-span-1 p-[20px] md:p-[40px] overflow-hidden rounded-[16px] md:rounded-[24px] bg-[#BC71FE] w-full ">
-                <div className="w-[93px] h-[40px] rounded-[100px] p-[10px_24px] font-semibold whitespace-nowrap bg-[#FFFFFF] font-manrope">
+                <div className="w-[93px] h-[40px] rounded-[100px] p-[10px_24px] font-semibold whitespace-nowrap bg-[#FFFFFF] ">
                   Step 2
                 </div>
                 <div>
-                  <h2 className="text-[32px] md:text-[40px] my-8 font-manrope font-bold text-[#FFFFFF]">
+                  <h2 className="text-[32px] md:text-[40px] my-8  font-bold text-[#FFFFFF]">
                     Launch Features
                   </h2>
                   <p className="text-[#FFFFFFCC] text-[24px]">
@@ -759,11 +749,11 @@ export default function ForBrands() {
                 />
               </div>
               <div className="h-fit md:h-[628px] col-span-1 p-[20px] md:p-[40px] overflow-hidden rounded-[16px] md:rounded-[24px] bg-[#F76593] w-full ">
-                <div className="w-[93px] h-[40px] rounded-[100px] p-[10px_24px] font-semibold whitespace-nowrap bg-[#FFFFFF] font-manrope">
+                <div className="w-[93px] h-[40px] rounded-[100px] p-[10px_24px] font-semibold whitespace-nowrap bg-[#FFFFFF] ">
                   Step 3
                 </div>
                 <div>
-                  <h2 className="text-[32px] md:text-[40px] my-8 font-manrope font-bold text-[#FFFFFF]">
+                  <h2 className="text-[32px] md:text-[40px] my-8  font-bold text-[#FFFFFF]">
                     Engage Users
                   </h2>
                   <p className="text-[#FFFFFFCC] text-[24px]">
@@ -777,11 +767,11 @@ export default function ForBrands() {
                 />
               </div>
               <div className="h-fit md:h-[628px]  col-span-1 p-[20px] md:p-[40px] overflow-hidden rounded-[16px] md:rounded-[24px] bg-[#008753] w-full ">
-                <div className="w-[93px] h-[40px] rounded-[100px] p-[10px_24px] font-semibold whitespace-nowrap bg-[#FFFFFF] font-manrope">
+                <div className="w-[93px] h-[40px] rounded-[100px] p-[10px_24px] font-semibold whitespace-nowrap bg-[#FFFFFF] ">
                   Step 4
                 </div>
                 <div>
-                  <h2 className="text-[32px] md:text-[40px] my-8 font-manrope font-bold text-[#FFFFFF]">
+                  <h2 className="text-[32px] md:text-[40px] my-8  font-bold text-[#FFFFFF]">
                     Track Results
                   </h2>
                   <p className="text-[#FFFFFFCC] text-[24px]">
@@ -796,12 +786,12 @@ export default function ForBrands() {
                 />
               </div>
               <div className="h-fit  md:min-h-[378px] col-span-1 lg:col-span-2 p-[20px] md:p-[40px] overflow-hidden rounded-[16px] md:rounded-[24px] bg-[#159481] w-full ">
-                <div className="w-[93px] h-[40px] rounded-[100px] p-[10px_24px] font-semibold whitespace-nowrap bg-[#FFFFFF] font-manrope">
+                <div className="w-[93px] h-[40px] rounded-[100px] p-[10px_24px] font-semibold whitespace-nowrap bg-[#FFFFFF] ">
                   Step 5
                 </div>
                 <div className=" flex flex-col lg:flex-row justify-between items-start lg:items-center">
                   <div className="w-full lg:w-1/2 lg:self-start ">
-                    <h2 className="text-[32px] md:text-[40px] my-5 font-manrope font-bold text-[#FFFFFF]">
+                    <h2 className="text-[32px] md:text-[40px] my-5  font-bold text-[#FFFFFF]">
                       Optional Premium Support
                     </h2>
                     <p className="text-[#FFFFFFCC] text-[24px]">
@@ -866,7 +856,7 @@ export default function ForBrands() {
               >
                 <div className="flex-shrink-0 w-full md:w-1/3 snap-center">
                   <div className="p-6 h-full rounded-xl shadow-md flex flex-col justify-between bg-blue-400">
-                    <p className="text-2xl font-semibold mb-4 font-manrope">
+                    <p className="text-2xl font-semibold mb-4 ">
                       Flowva gave us a new channel of discovery. Users were
                       genuinely interested and engagement was higher than on
                       ads.
@@ -898,7 +888,7 @@ export default function ForBrands() {
 
                 <div className="flex-shrink-0 w-full md:w-1/3 snap-center">
                   <div className="p-6 h-full rounded-xl shadow-md flex flex-col justify-between bg-[#b7ff28]">
-                    <p className="text-2xl font-semibold mb-4 font-manrope">
+                    <p className="text-2xl font-semibold mb-4 ">
                       Seamless and simple — our sign-ups grew with no extra work
                       on our end.
                     </p>
@@ -927,7 +917,7 @@ export default function ForBrands() {
 
                 <div className="flex-shrink-0 w-full md:w-1/3 snap-center">
                   <div className="p-6 h-full rounded-xl shadow-md flex flex-col justify-between bg-[#5dffe9]">
-                    <p className="text-2xl font-semibold mb-4 font-manrope">
+                    <p className="text-2xl font-semibold mb-4 ">
                       Users loved our cashback perk, and Flowva made the process
                       seamless.
                     </p>
@@ -1001,7 +991,7 @@ export default function ForBrands() {
               Flowva works with brands to give our users exclusive discounts,
               cashback, and perks.
             </p>
-            <button className="mt-6 left-1/2 font-manrope right-1/2 -translate-x-1/2 relative w-[232px]  text-sm font-bold border-[#9013FE1A] rounded-[100px] border p-[6px]">
+            <button className="mt-6 left-1/2  right-1/2 -translate-x-1/2 relative w-[232px]  text-sm font-bold border-[#9013FE1A] rounded-[100px] border p-[6px]">
               <div className=" w-full text-sm whitespace-nowrap p-[24px] rounded-[100px] relative bg-[#111111] hover:bg-[#b362fae3] transition-all ease-linear duration-200 text-white shadow-[0px_2px_4px_0px_#0000001A,0px_6px_6px_0px_#00000017,0px_14px_9px_0px_#0000000D,0px_26px_10px_0px_#00000003,0px_40px_11px_0px_#00000000,-4px_13px_19px_0px_#ECD6FF80_inset]">
                 Claim Your Spot
               </div>

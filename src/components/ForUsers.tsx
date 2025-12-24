@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import CoverFlowSlider from "./CoverFlowSlider";
 import FAQs from "./FAQs";
 import InfiniteMarquee from "./InfiniteMarquee";
+import { motion, AnimatePresence } from "framer-motion";
 
 const questions = [
   {
@@ -348,7 +349,7 @@ const ForUsers = () => {
 
         <div className="hidden lg:block">
           <div className="grid grid-cols-12 gap-4 max-w-7xl mx-auto">
-            {steps.map((step, index) => (
+            {/* {steps.map((step, index) => (
               <div
                 key={index}
                 onClick={() => goToSlide(index)}
@@ -402,6 +403,105 @@ const ForUsers = () => {
                   </div>
                 )}
               </div>
+            ))} */}
+            {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`relative overflow-hidden bg-[#ECD6FF] border border-[#0000001F] rounded-xl p-6 cursor-pointer h-[552px] ${
+                  activeIndex === index ? "col-span-8" : "col-span-2"
+                }`}
+                layout // Enables smooth layout animation (width change)
+                transition={{ duration: 0.7, ease: "easeInOut" }}
+              >
+                <motion.div className="flex flex-col justify-between h-full">
+                  <motion.h2
+                    className="font-impact text-black text-[120px] xl:text-[180px] leading-none"
+                    layout="position"
+                  >
+                    {step.number}
+                  </motion.h2>
+
+                  <div>
+                    <motion.h3
+                      className="text-[24px] xl:text-[36px] font-manrope font-bold xl:font-semibold text-black mb-2"
+                      layout="position"
+                    >
+                      {step.title}
+                    </motion.h3>
+
+                    {/* Description - Fade + Slide In */}
+                    <AnimatePresence>
+                      {activeIndex === index && (
+                        <motion.p
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 20 }}
+                          transition={{ duration: 0.5, delay: 0.2 }}
+                          className="text-[20px] text-black font-manrope font-semibold"
+                        >
+                          {step.desc}
+                        </motion.p>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </motion.div>
+
+                {/* Image - Fade + Scale In */}
+                <AnimatePresence>
+                  {activeIndex === index && step.img && (
+                    <motion.img
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.6, delay: 0.3 }}
+                      src={step.img}
+                      alt={step.title}
+                      className={`absolute rounded-[32px] ${step.imgClass}`}
+                    />
+                  )}
+                </AnimatePresence>
+
+                {/* Coins - Staggered Entrance */}
+                <AnimatePresence>
+                  {activeIndex === index && step.coins && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.5, delay: 0.4 }}
+                      className="absolute right-5 top-8 flex flex-col gap-4"
+                    >
+                      {[1, 2, 3].map((row) => (
+                        <motion.div
+                          key={row}
+                          initial={{ opacity: 0, x: 50 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.4 + row * 0.1 }}
+                          className={`flex items-center gap-1 ${
+                            row === 2 ? "-ml-20" : ""
+                          }`}
+                        >
+                          {[...Array(4)].map((_, i) => (
+                            <motion.img
+                              key={`${i}-${row}`}
+                              initial={{ opacity: 0, scale: 0 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{
+                                duration: 0.4,
+                                delay: 0.5 + (i + row * 4) * 0.05,
+                              }}
+                              src="/assets/flowva_coin-DtzxpoyE.svg"
+                              alt="coin"
+                              className="w-16 h-16"
+                            />
+                          ))}
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
             ))}
           </div>
 

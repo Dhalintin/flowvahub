@@ -27,7 +27,6 @@ export default function NavMenu() {
   const [menuOpen, setMenuOpen] = useState<string | null>(null);
   const ref = useRef(null);
 
-  // Close menu when clicking outside
   useClickAway(ref, () => {
     setMenuOpen(null);
   });
