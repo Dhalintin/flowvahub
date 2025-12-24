@@ -1,21 +1,12 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import ForUsers from "../components/ForUsers";
 import ForBrands from "../components/ForBrands";
 import NavComponent from "../components/NavComponent";
 
 const LandingPage = () => {
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [direction, setDirection] = useState<"left" | "right" | null>(null);
+  const [currentPage, setCurrentPage] = useState<"users" | "brands">("users");
 
-  const handlePageChange = (page: number) => {
-    console.log(direction);
-    if (page < currentPage) {
-      setDirection("left");
-    } else {
-      setDirection("right");
-    }
-    setCurrentPage(page);
-  };
   return (
     <div className="w-screen bg-white flex flex-col items-center justify-between relative">
       <div className="bg-black text-white flex w-full text-xs font-manrope md:text-sm h-14 items-center px-3">
@@ -33,57 +24,62 @@ const LandingPage = () => {
 
       <main className="">
         <div className="w-screen">
-          <div className="left-1/2 right-1/2 top-[25px] md:top-[40px] bg-[#F9F9F9] border border-[#0000000D] -translate-x-1/2 relative w-full max-w-[300px] h-20 flex items-center gap-[8px] rounded-[100px] p-[8px] z-[999]">
-            <button
-              onClick={() => handlePageChange(1)}
-              className={`relative z-10 flex items-center justify-center w-[50%] h-16 text-sm font-bold rounded-[100px] font-manrope px-3 ${
-                currentPage === 1 &&
-                "rounded-[100px] shadow-[0px_2px_4px_0px_#0000001A,0px_6px_6px_0px_#00000017,0px_14px_9px_0px_#0000000D,0px_26px_10px_0px_#00000003,0px_40px_11px_0px_#00000000,-4px_13px_19px_0px_#ECD6FF80_inset] bg-[#111111] translate-x-0"
-              }`}
-            >
-              <img
-                src="/assets/users_icon-B6c0TcgG.svg"
-                className="w-6 mr-2"
-                alt="users"
+          <div className="flex justify-center py-8 left-1/2 right-1/2 top-[25px] md:top-[40px]  border border-[#0000000D] -translate-x-1/2 relative w-full max-w-[300px] h-20 flex items-center gap-[8px] rounded-[100px] p-[8px] z-[999]">
+            <div className="relative bg-gray-100 rounded-full p-1 flex items-center shadow-inner max-w-sm w-full">
+              <motion.div
+                className="absolute inset-y-1 left-1 w-1/2 rounded-[100px] shadow-[0px_2px_4px_0px_#0000001A,0px_6px_6px_0px_#00000017,0px_14px_9px_0px_#0000000D,0px_26px_10px_0px_#00000003,0px_40px_11px_0px_#00000000,-4px_13px_19px_0px_#ECD6FF80_inset] bg-[#111111] translate-x-0"
+                animate={{
+                  x: currentPage === "users" ? 0 : "100%",
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
               />
-              <span
-                className={`${
-                  currentPage === 1
-                    ? "transition-colors duration-300 bg-gradient-to-r from-[#ECD6FF] to-[#FF8687] bg-clip-text text-transparent"
-                    : "transition-colors duration-300 text-black"
-                }`}
+
+              <button
+                onClick={() => setCurrentPage("users")}
+                className="relative z-10 flex items-center justify-center w-[50%] h-16 text-sm font-bold rounded-[100px] font-manrope px-3"
               >
-                For users
-              </span>
-            </button>
-            <button
-              onClick={() => handlePageChange(2)}
-              className={`relative z-10 flex items-center justify-center w-[50%] h-16 text-sm font-bold rounded-[100px] font-manrope px-3 ${
-                currentPage === 2 &&
-                "rounded-[100px] shadow-[0px_2px_4px_0px_#0000001A,0px_6px_6px_0px_#00000017,0px_14px_9px_0px_#0000000D,0px_26px_10px_0px_#00000003,0px_40px_11px_0px_#00000000,-4px_13px_19px_0px_#ECD6FF80_inset] bg-[#111111] translate-x-0"
-              }`}
-            >
-              <img
-                src="/assets/brands-BkudvqTg.svg"
-                className="w-6 mr-2"
-                alt="brands"
-              />
-              <span
-                className={`${
-                  currentPage === 2
-                    ? "transition-colors duration-300 bg-gradient-to-r from-[#ECD6FF] to-[#FF8687] bg-clip-text text-transparent"
-                    : "transition-colors duration-300 text-black"
-                }`}
+                <img
+                  src="/assets/users_icon-B6c0TcgG.svg"
+                  className="w-6 mr-2"
+                  alt="users"
+                />
+                <span
+                  className={`${
+                    currentPage === "users"
+                      ? "transition-colors duration-300 bg-gradient-to-r from-[#ECD6FF] to-[#FF8687] bg-clip-text text-transparent"
+                      : "transition-colors duration-300 text-black"
+                  }`}
+                >
+                  For users
+                </span>
+              </button>
+
+              <button
+                onClick={() => setCurrentPage("brands")}
+                className="relative z-10 flex items-center justify-center w-[50%] h-16 text-sm font-bold rounded-[100px] font-manrope px-3 $"
               >
-                For brands
-              </span>
-            </button>
+                <img
+                  src="/assets/brands-BkudvqTg.svg"
+                  className="w-6 mr-2"
+                  alt="brands"
+                />
+                <span
+                  className={`${
+                    currentPage === "brands"
+                      ? "transition-colors duration-300 bg-gradient-to-r from-[#ECD6FF] to-[#FF8687] bg-clip-text text-transparent"
+                      : "transition-colors duration-300 text-black"
+                  }`}
+                >
+                  For brands
+                </span>
+              </button>
+            </div>
           </div>
           <div className="relative overflow-hidden w-full">
             <div className="relative w-full">
               <div
                 className={`w-full transition-all duration-700 ease-in-out ${
-                  currentPage === 2
+                  currentPage === "brands"
                     ? "relative opacity-100 translate-x-0"
                     : "absolute opacity-0 translate-x-full pointer-events-none"
                 }`}
@@ -93,7 +89,7 @@ const LandingPage = () => {
 
               <div
                 className={`w-full transition-all duration-700 ease-in-out ${
-                  currentPage === 1
+                  currentPage === "users"
                     ? "relative opacity-100 translate-x-0"
                     : "absolute opacity-0 -translate-x-full pointer-events-none"
                 }`}
@@ -104,7 +100,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <footer className="bg-black grid place-items-center rounded-tl-[16px] md:rounded-tl-[32px] rounded-tr-[32px] pb-14">
+        <footer className="bg-black mt-8 grid place-items-center rounded-tl-[16px] md:rounded-tl-[32px] rounded-tr-[32px] pb-14">
           <div className="bg-[#FFFFFF0D] w-full max-w-[745px] grid place-items-center pb-10 rounded-bl-[32px] rounded-br-[32px]">
             <img
               src="/assets/flowva_icon_white-s0MDWMOg.svg"

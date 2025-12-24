@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import NavMenu from "./NavMenu";
 
 const NavComponent = () => {
-  const [menuOpen, setMenuOpen] = useState<string | null>(null);
   const [openDropDown, setOpenDropDown] = useState<boolean>(false);
   const [currentMenu, setCurrentMenu] = useState<string | null>(null);
 
@@ -27,28 +27,7 @@ const NavComponent = () => {
 
           <div className="border-l border-[#0000000D] h-[28px]" />
 
-          <ul className="flex items-center gap-6">
-            {["Hub", "Company", "Support", "Community"].map((item) => (
-              <li
-                key={item}
-                className="cursor-pointer"
-                onMouseOver={() => setMenuOpen(item)}
-                onMouseLeave={() => setMenuOpen(null)}
-              >
-                <span className="flex items-center gap-1 text-[#A5A5A5] hover:text-[#9013fe] transition-colors">
-                  {item}
-                  <svg
-                    viewBox="64 64 896 896"
-                    width="12"
-                    height="12"
-                    fill="currentColor"
-                  >
-                    <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z" />
-                  </svg>
-                </span>
-              </li>
-            ))}
-          </ul>
+          <NavMenu />
         </div>
 
         <div className="flex items-center gap-4">
@@ -412,101 +391,24 @@ const NavComponent = () => {
               </div>
             </div>
             <div className=" flex mt-5 items-center gap-[12px] flex-col">
-              <button className="w-full h-[57px] text-sm font-bold border-[#9013FE1A] rounded-[100px] border p-[4px]">
+              <Link
+                to="/signin"
+                className="w-full h-[57px] text-sm font-bold border-[#9013FE1A] rounded-[100px] border p-[4px]"
+              >
                 <span className="h-full flex justify-center items-center w-full p-[6px_16px] hover:bg-[#111111] hover:shadow-[0px_2px_4px_0px_#0000001A,0px_6px_6px_0px_#00000017,0px_14px_9px_0px_#0000000D,0px_26px_10px_0px_#00000003,0px_40px_11px_0px_#00000000,-4px_13px_19px_0px_#ECD6FF80_inset] hover:text-white rounded-[100px] relative shadow-[0px_2px_4px_0px_#0000001A]">
                   Login
                 </span>
-              </button>
-              <button className="w-full h-[57px] text-sm font-bold border-[#9013FE1A] rounded-[100px] border p-[4px]">
+              </Link>
+              <Link
+                to="/signup"
+                className="w-full h-[57px] text-sm font-bold border-[#9013FE1A] rounded-[100px] border p-[4px]"
+              >
                 <span className="h-full flex justify-center items-center w-full whitespace-nowrap p-[6px_16px] rounded-[100px] relative bg-[#111111] hover:bg-[#b362fae3] transition-all ease-linear duration-200 text-white shadow-[0px_2px_4px_0px_#0000001A,0px_6px_6px_0px_#00000017,0px_14px_9px_0px_#0000000D,0px_26px_10px_0px_#00000003,0px_40px_11px_0px_#00000000,-4px_13px_19px_0px_#ECD6FF80_inset]">
                   Sign up
                 </span>
-              </button>
+              </Link>
             </div>
           </aside>
-        </div>
-      )}
-      {menuOpen === "Hub" && (
-        <div className="fixed left-1/2 -translate-x-1/2 top-[130px] flex justify-center w-screen z-[9999] h-[calc(100vh-50px)] bg-[#0000008f] transition-all duration-300 ease-in-out opacity-100 translate-y-0 ">
-          <div className="flex items-center w-full !h-fit pt-2 justify-center rounded-b-[32px] shadow-md bg-white  pb-9 transition-all duration-300 ease-in-out">
-            <div className="w-full max-w-[80%] flex items-center gap-4">
-              <div className="w-[273px] h-[345px] flex flex-col items-center justify-center p-[16px] gap-[40px] bg-navBg bg-cover bg-top border border-[rgba(0,0,0,0.04)] rounded-[16px] shadow-[inset_0px_9px_6.3px_rgba(255,255,255,0.32)] shadow-2xl bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 p-8">
-                <img src="/assets/discover_3d-Cn-gflHt.svg" alt="icon 1" />
-                <a className="font-[impact] text-[32px] text-black">DISCOVER</a>
-              </div>
-              <div className="w-[273px] h-[345px] flex flex-col items-center justify-center p-[16px] gap-[40px] bg-navBg bg-cover bg-top border border-[rgba(0,0,0,0.04)] rounded-[16px] shadow-[inset_0px_9px_6.3px_rgba(255,255,255,0.32)] shadow-2xl bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 p-8">
-                <img src="/assets/library_3d-DJsKB8Bt.svg" alt="icon 2" />
-                <a className="font-[impact] text-[32px] text-black">LIBRARY</a>
-              </div>
-              <div className="w-[273px] h-[345px] flex flex-col items-center justify-center p-[16px] gap-[40px] bg-navBg bg-cover bg-top border border-[rgba(0,0,0,0.04)] rounded-[16px] shadow-[inset_0px_9px_6.3px_rgba(255,255,255,0.32)] shadow-2xl bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 p-8">
-                <img src="/assets/flowva_coin_3d-njHx05Wr.svg" alt="icon 3" />
-                <a className="font-[impact] text-[32px] text-black">REWARD</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {menuOpen === "Company" && (
-        <div className="fixed left-1/2 -translate-x-1/2 top-[130px] flex justify-center w-screen z-[9999] h-[calc(100vh-50px)] bg-[#0000008f] transition-all duration-300 ease-in-out opacity-100 translate-y-0">
-          <div className="flex items-center w-full !h-fit pt-2 justify-center rounded-b-[32px] shadow-md bg-white  pb-9 transition-all duration-300 ease-in-out">
-            <div className="w-full max-w-[80%] flex items-center gap-4">
-              <div className="w-[273px] h-[345px] flex flex-col items-center justify-center p-[16px] gap-[40px] bg-navBg bg-cover bg-top border border-[rgba(0,0,0,0.04)] rounded-[16px] shadow-[inset_0px_9px_6.3px_rgba(255,255,255,0.32)] shadow-2xl bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 p-8">
-                <img src="/assets/about_us_3d-CEqfrf2g.svg" alt="icon 1" />
-                <a className="font-[impact] text-[32px] text-black">ABOUT US</a>
-              </div>
-              <div className="w-[273px] h-[345px] flex flex-col items-center justify-center p-[16px] gap-[40px] bg-navBg bg-cover bg-top border border-[rgba(0,0,0,0.04)] rounded-[16px] shadow-[inset_0px_9px_6.3px_rgba(255,255,255,0.32)] shadow-2xl bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 p-8">
-                <img src="/assets/blog-BBGHudp6.svg" alt="icon 2" />
-                <a className="font-[impact] text-[32px] text-black">BLOG</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {menuOpen === "Support" && (
-        <div className="fixed left-1/2 -translate-x-1/2 top-[130px] flex justify-center w-screen z-[9999] h-[calc(100vh-50px)] bg-[#0000008f] transition-all duration-300 ease-in-out opacity-100 translate-y-0">
-          <div className="flex items-center w-full !h-fit pt-2 justify-center rounded-b-[32px] shadow-md bg-white  pb-9 transition-all duration-300 ease-in-out">
-            <div className="w-full max-w-[80%] flex items-center gap-4">
-              <div className="w-[273px] h-[345px] flex flex-col items-center justify-center p-[16px] gap-[40px] bg-navBg bg-cover bg-top border border-[rgba(0,0,0,0.04)] rounded-[16px] shadow-[inset_0px_9px_6.3px_rgba(255,255,255,0.32)] shadow-2xl bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 p-8">
-                <img src="/assets/faq_3d-wTGpvg4U.svg" alt="icon 1" />
-                <a className="font-[impact] text-[32px] text-black">FAQs</a>
-              </div>
-              <div className="w-[273px] h-[345px] flex flex-col items-center justify-center p-[16px] gap-[40px] bg-navBg bg-cover bg-top border border-[rgba(0,0,0,0.04)] rounded-[16px] shadow-[inset_0px_9px_6.3px_rgba(255,255,255,0.32)] shadow-2xl bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 p-8">
-                <img src="/assets/contact_3d-BS_WZkr-.svg" alt="icon 2" />
-                <a className="font-[impact] text-[32px] text-black">
-                  CONTACT US
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {menuOpen === "Community" && (
-        <div className="fixed left-1/2 -translate-x-1/2 top-[130px] flex justify-center w-screen z-[9999] h-[calc(100vh-50px)] bg-[#0000008f] transition-all duration-300 ease-in-out opacity-100 translate-y-0">
-          <div className="flex items-center w-full !h-fit pt-2 justify-center rounded-b-[32px] shadow-md bg-white  pb-9 transition-all duration-300 ease-in-out">
-            <div className="w-full max-w-[80%] flex items-center gap-4">
-              <div className="w-[273px] h-[345px] flex flex-col items-center justify-center p-[16px] gap-[40px] bg-navBg bg-cover bg-top border border-[rgba(0,0,0,0.04)] rounded-[16px] shadow-[inset_0px_9px_6.3px_rgba(255,255,255,0.32)] shadow-2xl bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 p-8">
-                <img src="/assets/affiliate_3d-CpeSvQCc.svg" alt="icon 1" />
-                <a className="font-[impact] text-[32px] text-black">
-                  Affiliate
-                </a>
-              </div>
-              <div className="w-[273px] h-[345px] flex flex-col items-center justify-center p-[16px] gap-[40px] bg-navBg bg-cover bg-top border border-[rgba(0,0,0,0.04)] rounded-[16px] shadow-[inset_0px_9px_6.3px_rgba(255,255,255,0.32)] shadow-2xl bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 p-8">
-                <img src="/assets/influencer_3d-Wghj8koF.svg" alt="icon 2" />
-                <a className="font-[impact] text-[32px] text-black">
-                  Influencer
-                </a>
-              </div>
-              <div className="w-[273px] h-[345px] flex flex-col items-center justify-center p-[16px] gap-[40px] bg-navBg bg-cover bg-top border border-[rgba(0,0,0,0.04)] rounded-[16px] shadow-[inset_0px_9px_6.3px_rgba(255,255,255,0.32)] shadow-2xl bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 p-8">
-                <img src="/assets/refer_3d-CElcrl4H.svg" alt="icon 3" />
-                <a className="font-[impact] text-[32px] text-black">
-                  Refer to Earn
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       )}
     </nav>

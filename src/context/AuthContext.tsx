@@ -47,7 +47,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const res = await supabase.auth.signUp({ email, password });
     const { error } = res;
     if (error) throw error;
-    console.log(res);
+
     setLoading(false);
   };
 
@@ -75,7 +75,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: window.location.origin,
+        redirectTo: "/",
       },
     });
     if (error) throw error;
