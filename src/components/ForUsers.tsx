@@ -147,14 +147,29 @@ const ForUsers = () => {
       const newProgress = (elapsed / SLIDE_DURATION) * 100;
 
       if (newProgress >= 100) {
-        setActiveIndex((prev) => (prev + 1) % steps.length);
+        let curr;
+        if (activeIndex === steps.length - 1) {
+          curr = 0;
+        } else {
+          curr = activeIndex + 1;
+        }
+        setActiveIndex(curr);
       } else {
         setProgress(newProgress);
       }
     }, 50);
 
+    console.log(activeIndex);
+
     const timeout = setTimeout(() => {
-      setActiveIndex((prev) => (prev + 1) % steps.length);
+      // setActiveIndex((prev) => (prev + 1) % steps.length);
+      let curr;
+      if (activeIndex === steps.length - 1) {
+        curr = 0;
+      } else {
+        curr = activeIndex + 1;
+      }
+      setActiveIndex(curr);
     }, SLIDE_DURATION);
 
     return () => {
@@ -349,61 +364,6 @@ const ForUsers = () => {
 
         <div className="hidden lg:block">
           <div className="grid grid-cols-12 gap-4 max-w-7xl mx-auto">
-            {/* {steps.map((step, index) => (
-              <div
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`relative overflow-hidden bg-[#ECD6FF] border border-[#0000001F] rounded-xl p-6 cursor-pointer transition-all duration-700 ease-in-out h-[552px] ${
-                  activeIndex === index ? "col-span-8" : "col-span-2"
-                }`}
-              >
-                <div className="flex flex-col justify-between h-full">
-                  <h2 className="font-impact text-black text-[120px] xl:text-[180px] leading-none">
-                    {step.number}
-                  </h2>
-                  <div>
-                    <h3 className="text-[24px] xl:text-[36px] font-manrope font-bold xl:font-semibold text-black mb-2">
-                      {step.title}
-                    </h3>
-                    {activeIndex === index && (
-                      <p className="text-[20px] text-black font-manrope font-semibold">
-                        {step.desc}
-                      </p>
-                    )}
-                  </div>
-                </div>
-
-                {activeIndex === index && step.img && (
-                  <img
-                    src={step.img}
-                    alt={step.title}
-                    className={`absolute rounded-[32px] ${step.imgClass}`}
-                  />
-                )}
-
-                {activeIndex === index && step.coins && (
-                  <div className="absolute right-5 top-8 flex flex-col gap-4">
-                    {[1, 2, 3].map((row) => (
-                      <div
-                        key={row}
-                        className={`flex items-center gap-1 ${
-                          row === 2 ? "-ml-20" : ""
-                        }`}
-                      >
-                        {[...Array(4)].map((_, i) => (
-                          <img
-                            key={`${i}-${row}`}
-                            src="/assets/flowva_coin-DtzxpoyE.svg"
-                            alt="coin"
-                            className="w-16 h-16"
-                          />
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))} */}
             {steps.map((step, index) => (
               <motion.div
                 key={index}
@@ -411,7 +371,7 @@ const ForUsers = () => {
                 className={`relative overflow-hidden bg-[#ECD6FF] border border-[#0000001F] rounded-xl p-6 cursor-pointer h-[552px] ${
                   activeIndex === index ? "col-span-8" : "col-span-2"
                 }`}
-                layout // Enables smooth layout animation (width change)
+                layout
                 transition={{ duration: 0.7, ease: "easeInOut" }}
               >
                 <motion.div className="flex flex-col justify-between h-full">
@@ -430,7 +390,6 @@ const ForUsers = () => {
                       {step.title}
                     </motion.h3>
 
-                    {/* Description - Fade + Slide In */}
                     <AnimatePresence>
                       {activeIndex === index && (
                         <motion.p
@@ -447,7 +406,6 @@ const ForUsers = () => {
                   </div>
                 </motion.div>
 
-                {/* Image - Fade + Scale In */}
                 <AnimatePresence>
                   {activeIndex === index && step.img && (
                     <motion.img
@@ -462,7 +420,6 @@ const ForUsers = () => {
                   )}
                 </AnimatePresence>
 
-                {/* Coins - Staggered Entrance */}
                 <AnimatePresence>
                   {activeIndex === index && step.coins && (
                     <motion.div
