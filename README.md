@@ -41,3 +41,26 @@ This project is built with **React**, **TypeScript**, **Vite**, and **Tailwind C
 git clone https://github.com/yourusername/flowvahub-frontend.git
 cd flowvahub-frontend
 ```
+
+### Setp and Running Locally
+
+1. Make a copy the .example.env file as a .env
+
+2. Get your credentials from your Supabase account to enable connection
+
+```bash
+VITE_SUPABASE_URL=
+VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY=
+```
+
+3. Install all neccesary dependencies
+
+```bash
+npm install
+```
+
+3. Start the server
+
+```bash
+npm run dev
+```
